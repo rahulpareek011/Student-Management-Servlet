@@ -15,6 +15,7 @@ public class AddStudentServlet extends HttpServlet {
 
     private RStudentService studentService;
 
+    //here in servlet this method runs first
     @Override
     public void init() throws ServletException {
         studentService = StudentServiceFactory.getStudentService();
