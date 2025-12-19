@@ -38,7 +38,7 @@ public class DeleteStudentServlet extends HttpServlet{
 	    boolean result = studentService.deleteStudent(id);
 
 	    if (result) {
-	        resp.sendRedirect("students");
+	        resp.sendRedirect("students?success=deleted");
 	    } else {
 	        resp.getWriter().println("Failed to delete student!");
 	    }

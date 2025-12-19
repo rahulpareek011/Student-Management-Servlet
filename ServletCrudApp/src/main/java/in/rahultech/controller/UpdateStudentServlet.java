@@ -58,7 +58,7 @@ public class UpdateStudentServlet extends HttpServlet {
         boolean result = studentService.updateStudent(s);
 
         if (result) {
-            resp.sendRedirect("students");  
+            resp.sendRedirect("students?success=updated");  
         } else {
             resp.getWriter().println("Failed to update student!");
         }

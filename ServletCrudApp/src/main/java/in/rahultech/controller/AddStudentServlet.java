@@ -37,7 +37,7 @@ public class AddStudentServlet extends HttpServlet {
         boolean result = studentService.addStudent(s);
 
         if (result)
-            resp.sendRedirect("students");     // go back to list
+            resp.sendRedirect("students?success=added");     // go back to list
         else
             resp.getWriter().println("Failed to insert student!");
     }
